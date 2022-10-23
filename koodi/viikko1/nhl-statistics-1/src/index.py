@@ -10,7 +10,7 @@ def main():
     for player in philadelphia_flyers_players:
         print(player)
 
-    print("Top scorers:")
+    print("Top point getters:")
     for player in top_scorers:
         print(player)
 
