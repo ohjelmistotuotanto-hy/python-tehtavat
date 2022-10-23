@@ -26,7 +26,7 @@ class Statistics:
 
         return list(players_of_team)
 
-    def top_scorers(self, how_many):
+    def top(self, how_many):
         sorted_players = sorted(
             self._players,
             reverse=True,
