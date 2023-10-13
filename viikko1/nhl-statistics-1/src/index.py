@@ -1,8 +1,8 @@
-from statistics import Statistics
+from statistics_service import StatisticsService
 
 
 def main():
-    stats = Statistics()
+    stats = StatisticsService()
     philadelphia_flyers_players = stats.team("PHI")
     top_scorers = stats.top(10)
 
