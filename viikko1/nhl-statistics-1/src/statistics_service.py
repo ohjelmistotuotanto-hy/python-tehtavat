@@ -5,7 +5,7 @@ def sort_by_points(player):
     return player.points
 
 
-class Statistics:
+class StatisticsService:
     def __init__(self):
         reader = PlayerReader()
 
