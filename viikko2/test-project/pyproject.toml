@@ -2,7 +2,7 @@
 name = "Ohtutesting app"
 version = "0.0.1"
 description = "Sovellus joka toimii testisyötteenä ohtun viikon 2 laskareihin"
-authors = ["Matti Luukkainen"]
+authors = ["Matti Luukkainen", "Kalle Ilves"]
 license = "MIT"
 readme = "README.md"
 
