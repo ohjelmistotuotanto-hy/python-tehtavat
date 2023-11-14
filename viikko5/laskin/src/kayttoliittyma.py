@@ -15,11 +15,11 @@ class Kayttoliittyma:
         self._root = root
 
     def kaynnista(self):
-        self._tulos_var = StringVar()
-        self._tulos_var.set(self._sovellus.tulos)
+        self._arvo_var = StringVar()
+        self._arvo_var.set(self._sovellus.arvo())
         self._syote_kentta = ttk.Entry(master=self._root)
 
-        tulos_teksti = ttk.Label(textvariable=self._tulos_var)
+        tulos_teksti = ttk.Label(textvariable=self._arvo_var)
 
         summa_painike = ttk.Button(
             master=self._root,
@@ -73,10 +73,10 @@ class Kayttoliittyma:
 
         self._kumoa_painike["state"] = constants.NORMAL
 
-        if self._sovellus.tulos == 0:
+        if self._sovellus.arvo() == 0:
             self._nollaus_painike["state"] = constants.DISABLED
         else:
             self._nollaus_painike["state"] = constants.NORMAL
 
         self._syote_kentta.delete(0, constants.END)
-        self._tulos_var.set(self._sovellus.tulos)
+        self._arvo_var.set(self._sovellus.arvo())
