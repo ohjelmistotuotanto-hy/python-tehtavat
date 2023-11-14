@@ -1,15 +1,18 @@
 class Sovelluslogiikka:
-    def __init__(self, tulos=0):
-        self.tulos = tulos
+    def __init__(self, arvo=0):
+        self._arvo = arvo
 
-    def miinus(self, arvo):
-        self.tulos = self.tulos - arvo
+    def miinus(self, operandi):
+        self._arvo = self._arvo - operandi
 
-    def plus(self, arvo):
-        self.tulos = self.tulos + arvo
+    def plus(self, operandi):
+        self._arvo = self._arvo + operandi
 
     def nollaa(self):
-        self.tulos = 0
+        self._arvo = 0
 
     def aseta_arvo(self, arvo):
-        self.tulos = arvo
+        self._arvo = arvo
+
+    def arvo(self):
+        return self._arvo
