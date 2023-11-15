@@ -55,7 +55,7 @@ class IntJoukko:
             if self.alkioiden_lkm % len(self.ljono) == 0:
                 taulukko_old = self.ljono
                 self.kopioi_taulukko(self.ljono, taulukko_old)
-                self.ljono = [0] * (self.alkioiden_lkm + self.kasvatuskoko)
+                self.ljono = self.luo_taulukko(self.alkioiden_lkm + self.kasvatuskoko)
                 self.kopioi_taulukko(taulukko_old, self.ljono)
 
             return True
