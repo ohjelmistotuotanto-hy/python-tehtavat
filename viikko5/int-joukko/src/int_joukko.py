@@ -3,8 +3,8 @@ OLETUSKASVATUS = 5
 
 
 class IntJoukko:
-    # tämä funktio on ainoa tapa luoda taulukkoja
-    def luo_taulukko(self, koko):
+    # tämä metodi on ainoa tapa luoda listoja
+    def _luo_lista(self, koko):
         return [0] * koko
     
     def __init__(self, kapasiteetti=None, kasvatuskoko=None):
@@ -22,7 +22,7 @@ class IntJoukko:
         else:
             self.kasvatuskoko = kasvatuskoko
 
-        self.ljono = self.luo_taulukko(self.kapasiteetti)
+        self.ljono = self._luo_lista(self.kapasiteetti)
 
         self.alkioiden_lkm = 0
 
@@ -54,9 +54,9 @@ class IntJoukko:
 
             if self.alkioiden_lkm % len(self.ljono) == 0:
                 taulukko_old = self.ljono
-                self.kopioi_taulukko(self.ljono, taulukko_old)
-                self.ljono = self.luo_taulukko(self.alkioiden_lkm + self.kasvatuskoko)
-                self.kopioi_taulukko(taulukko_old, self.ljono)
+                self.kopioi_lista(self.ljono, taulukko_old)
+                self.ljono = self._luo_lista(self.alkioiden_lkm + self.kasvatuskoko)
+                self.kopioi_lista(taulukko_old, self.ljono)
 
             return True
 
@@ -83,7 +83,7 @@ class IntJoukko:
 
         return False
 
-    def kopioi_taulukko(self, a, b):
+    def kopioi_lista(self, a, b):
         for i in range(0, len(a)):
             b[i] = a[i]
 
