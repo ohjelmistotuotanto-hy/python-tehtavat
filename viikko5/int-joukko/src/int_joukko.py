@@ -5,7 +5,7 @@ OLETUSKASVATUS = 5
 class IntJoukko:
     # tämä funktio on ainoa tapa luoda taulukkoja
     def luo_taulukko(self, koko):
-        return [0] * self.koko
+        return [0] * koko
     
     def __init__(self, kapasiteetti=None, kasvatuskoko=None):
         if kapasiteetti is None:
