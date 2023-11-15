@@ -3,6 +3,10 @@ OLETUSKASVATUS = 5
 
 
 class IntJoukko:
+    # tämä funktio on ainoa tapa luoda taulukkoja
+    def luo_taulukko(self, koko):
+        return [0] * self.koko
+    
     def __init__(self, kapasiteetti=None, kasvatuskoko=None):
         if kapasiteetti is None:
             self.kapasiteetti = KAPASITEETTI
@@ -18,7 +22,7 @@ class IntJoukko:
         else:
             self.kasvatuskoko = kasvatuskoko
 
-        self.ljono = [0] * self.kapasiteetti
+        self.ljono = self.luo_taulukko(self.kapasiteetti)
 
         self.alkioiden_lkm = 0
 
