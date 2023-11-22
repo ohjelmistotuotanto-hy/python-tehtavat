@@ -9,7 +9,7 @@ def main():
 
     matcher = And(
         HasAtLeast(5, "goals"),
-        HasAtLeast(5, "assists"),
+        HasAtLeast(20, "assists"),
         PlaysIn("PHI")
     )
 
